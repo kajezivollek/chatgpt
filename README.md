@@ -13,6 +13,7 @@ Language buttons (CZ / DE / EN) are in the top bar.
 
 ## How to edit
 - **All texts, city name, team names:** `js/content.js`
+- **Colours (primary, secondary, contrast):** top of `css/style.css`
 - **Crest & flag:** `photos/crest.png`, `photos/flag.png`
 - **Photos:** `photos/` (see `photos/README.md`)
 - **Audio guides:** `media/audio/` (see `media/audio/README.md`)

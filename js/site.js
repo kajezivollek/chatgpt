@@ -99,7 +99,7 @@
   function audio(el) {
     const n = el.dataset.audio;
     el.innerHTML = `
-      <div class="audio-head"><span class="qr-badge">QR ${esc(n)}</span> 🎧 ${esc(t("audio.title"))}</div>
+      <div class="audio-head"><span class="qr-badge">QR ${esc(n)}</span> ${esc(t("audio.title"))}</div>
       ${["cs", "de"].map((l) => `
         <div class="audio-row">
           <span class="audio-lang">${esc(t("audio." + l))}</span>
