@@ -18,7 +18,14 @@ Language buttons (CZ / DE / EN) are in the top bar.
 - **Photos:** `photos/` (see `photos/README.md`)
 - **Audio guides:** `media/audio/` (see `media/audio/README.md`)
 
-## Put it online (needed for the QR codes)
+## Put it online on Render (needed for the QR codes)
+1. Put these files in a GitHub repository (on github.com: *Add file → Upload files*, drag everything from the zip in).
+2. On render.com: *New → Blueprint*, pick the repository. Render reads `render.yaml` and creates a static site called `green-city`.
+   (Or *New → Static Site*, Build command: `echo "No build needed"`, Publish directory: `.`)
+3. Render gives you an address like `https://green-city.onrender.com`.
+4. Open `https://<your-address>/print.html`, test every link in the planner and print the signs at 100 % scale.
+
+## Other option: GitHub Pages
 GitHub Pages: repository *Settings → Pages → Deploy from a branch*, choose the branch and `/ (root)`.
 Then open `print.html` on the live site (or enter the live address in the box), check every link in the planner, and print at 100 % scale.
 
