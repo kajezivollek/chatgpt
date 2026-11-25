@@ -20,7 +20,7 @@
 
   /* ---- Printable sheets (real sizes) ---- */
   .sheet { background: #fff; color: #000; padding: 10mm; margin: 0 auto 24px; width: 210mm; max-width: 100%; overflow-x: auto; border: 1px solid var(--divider); }
-  .signs { display: grid; grid-template-columns: repeat(3, 58mm); gap: 8mm 6mm; justify-content: center; }
+  .signs { display: grid; grid-template-columns: repeat(2, 58mm); gap: 8mm 12mm; justify-content: center; }
   .sign { width: 58mm; height: 124mm; border: 0.3mm solid #999; display: flex; flex-direction: column; font-family: Arial, Helvetica, sans-serif; break-inside: avoid; }
   .sign .front { height: 95mm; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 3mm; }
   .sign .top { width: calc(100% + 6mm); background: #36454f; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 2mm 3mm; font-weight: 700; font-size: 3.6mm; border-bottom: 1.2mm solid #708090; }
@@ -78,9 +78,7 @@
     <div class="tbl-wrap"><table class="planner" id="planner"></table></div>
   </section>
 
-  <div class="sheet"><div class="signs" id="signs-1"></div></div>
-
-  <div class="sheet page-break"><div class="signs" id="signs-2"></div></div>
+  <div id="sign-sheets"></div>
 
   <div class="sheet page-break">
     <div class="rules-print" id="rules-card"></div>
@@ -139,8 +137,11 @@
         <div class="base">${crest}<span>Stanoviště / Station ${s.n}</span></div>
       </div>`;
     });
-    document.getElementById("signs-1").innerHTML = signsHTML.slice(0, 3).join("");
-    document.getElementById("signs-2").innerHTML = signsHTML.slice(3).join("");
+    // 2 signs per A4 page
+    let sheets = "";
+    for (let i = 0; i < signsHTML.length; i += 2)
+      sheets += `<div class="sheet${i ? " page-break" : ""}"><div class="signs">${signsHTML.slice(i, i + 2).join("")}</div></div>`;
+    document.getElementById("sign-sheets").innerHTML = sheets;
 
     const cs = TEXT.cs["home.rules"], de = TEXT.de["home.rules"];
     document.getElementById("rules-card").innerHTML = `
