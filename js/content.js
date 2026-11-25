@@ -12,13 +12,10 @@ const CONFIG = {
   // Leave empty to use the address the site is currently opened from.
   siteUrl: "",
 
-  // Team: 5 pairs x 2 members = 10 people. Replace the names.
+  // Team 3: our 10 members (first name, surname).
   team: [
-    { pair: 1, cz: "Jméno Příjmení", de: "Vorname Nachname" },
-    { pair: 2, cz: "Jméno Příjmení", de: "Vorname Nachname" },
-    { pair: 3, cz: "Jméno Příjmení", de: "Vorname Nachname" },
-    { pair: 4, cz: "Jméno Příjmení", de: "Vorname Nachname" },
-    { pair: 5, cz: "Jméno Příjmení", de: "Vorname Nachname" }
+    "Jonathan Apel", "Anneke Wittler", "Nicolas Tlustoš", "Viola Novotná", "Hande Akmaner",
+    "Alexandra Lavin", "Tobias Knoth", "Kaj Kuchař", "Emma Wernerová", "Patrik Buš"
   ],
 
   // Gallery photos in /photos (missing files are hidden automatically).
@@ -99,7 +96,7 @@ const TEXT = {
     "tm.day1": "Seznámili jsme se s partnery a dohodli se na názvu, mottu a Zlatých pravidlech. Pak jsme nakreslili půdorys a pustili se do prvních budov.",
     "tm.day2Title": "2. den: dokončení a web",
     "tm.day2": "Dostavěli jsme budovy a dali vlajku na radnici. Nahráli jsme audioprůvodce, udělali tenhle web a postavili QR cedulky k budovám.",
-    "tm.teamTitle": "Kdo jsme",
+    "tm.teamTitle": "Kdo jsme: tým 3",
     "tm.pair": "Dvojice",
     "tm.roles": [
       "Dominanta, škola a nemocnice",
@@ -181,7 +178,7 @@ const TEXT = {
     "tm.day1": "Wir haben unsere Partner kennengelernt und uns auf Namen, Motto und Goldene Regeln geeinigt. Dann haben wir den Grundriss gezeichnet und mit den ersten Gebäuden angefangen.",
     "tm.day2Title": "Tag 2: Fertigstellen und online gehen",
     "tm.day2": "Wir haben die Gebäude fertig gebaut und die Flagge aufs Rathaus gesetzt. Wir haben die Audioguides aufgenommen, diese Website gebaut und die QR-Schilder neben die Gebäude gestellt.",
-    "tm.teamTitle": "Wer wir sind",
+    "tm.teamTitle": "Wer wir sind: Team 3",
     "tm.pair": "Paar",
     "tm.roles": [
       "Wahrzeichen, Schule und Krankenhaus",
@@ -263,7 +260,7 @@ const TEXT = {
     "tm.day1": "We met our partners and agreed on a name, a motto and the Golden Rules. Then we drew the floor plan and started on the first buildings.",
     "tm.day2Title": "Day 2: finishing and going online",
     "tm.day2": "We finished the buildings and put the flag on the Town Hall. We recorded the audio guides, built this website and stood the QR signs next to the buildings.",
-    "tm.teamTitle": "Who we are",
+    "tm.teamTitle": "Who we are: Team 3",
     "tm.pair": "Pair",
     "tm.roles": [
       "Landmark, school and hospital",

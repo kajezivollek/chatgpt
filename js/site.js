@@ -139,15 +139,7 @@
   }
 
   function team(el) {
-    el.innerHTML = CONFIG.team.map((p, i) => `
-      <div class="pair card">
-        <div class="pair-num">${esc(t("tm.pair"))} ${p.pair}</div>
-        <div class="pair-role">${esc(t("tm.roles")[i] || "")}</div>
-        <ul>
-          <li><span class="tag cz">CZ</span>${esc(p.cz)}</li>
-          <li><span class="tag de">DE</span>${esc(p.de)}</li>
-        </ul>
-      </div>`).join("");
+    el.innerHTML = CONFIG.team.map((name) => `<li>${esc(name)}</li>`).join("");
   }
 
   function render() {
