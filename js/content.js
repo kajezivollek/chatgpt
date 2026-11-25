@@ -6,7 +6,7 @@
 
 const CONFIG = {
   // City name (same in all languages). Replace it with your own name
-  cityName: "Green City",
+  cityName: "Solmara",
 
   // Public web address of the site once it is online (used for the QR codes).
   // Leave empty to use the address the site is currently opened from.
@@ -51,7 +51,7 @@ const TEXT = {
     "home.kicker": "Česko-německý projektový týden, Bielefeld",
     "home.motto": "Dva jazyky, jedno město.",
     "home.welcomeTitle": "Vítejte",
-    "home.welcome": "Ahoj a vítejte v našem městě. Deset z nás, pět z Česka a pět z Německa, naplánovalo a postavilo tento model během projektového týdne v Bielefeldu. Naskenujte QR kódy na modelu nebo se rozhlédněte přes menu nahoře.",
+    "home.welcome": "Ahoj a vítejte v Solmaře, zeleném městě jižní Evropy v roce 2050. Deset z nás, pět z Česka a pět z Německa, naplánovalo a postavilo tento model během projektového týdne v Bielefeldu. Naskenujte QR kódy na modelu nebo se rozhlédněte přes menu nahoře.",
     "home.rulesTitle": "Našich 5 Zlatých pravidel",
     "home.rules": [
       "Neodhazuj odpadky.",
@@ -61,7 +61,7 @@ const TEXT = {
       "Střední škola je pro všechny povinná."
     ],
     "home.identityTitle": "Znak a vlajka",
-    "home.identity": "Pro město jsme navrhli vlastní znak a vlajku. Vlajku najdete i na radnici v modelu.",
+    "home.identity": "Název {city} spojuje dvě latinská slova: sol (slunce) a mare (moře). Pro město jsme navrhli vlastní znak a vlajku. Vlajku najdete i na radnici v modelu.",
     "home.crestCap": "Městský znak",
     "home.flagCap": "Městská vlajka",
     "home.planTitle": "Půdorys města",
@@ -133,7 +133,7 @@ const TEXT = {
     "home.kicker": "Deutsch-tschechische Projektwoche, Bielefeld",
     "home.motto": "Zwei Sprachen, eine Stadt.",
     "home.welcomeTitle": "Willkommen",
-    "home.welcome": "Hallo und willkommen in unserer Stadt. Wir sind zehn Schülerinnen und Schüler, fünf aus Tschechien und fünf aus Deutschland, und haben dieses Modell in der Projektwoche in Bielefeld geplant und gebaut. Scannt die QR-Codes am Modell oder schaut euch über das Menü oben um.",
+    "home.welcome": "Hallo und willkommen in {city}, einer grünen Stadt in Südeuropa im Jahr 2050. Wir sind zehn Schülerinnen und Schüler, fünf aus Tschechien und fünf aus Deutschland, und haben dieses Modell in der Projektwoche in Bielefeld geplant und gebaut. Scannt die QR-Codes am Modell oder schaut euch über das Menü oben um.",
     "home.rulesTitle": "Unsere 5 Goldenen Regeln",
     "home.rules": [
       "Wirf keinen Müll weg.",
@@ -143,7 +143,7 @@ const TEXT = {
       "Alle müssen die Oberstufe besuchen."
     ],
     "home.identityTitle": "Wappen und Flagge",
-    "home.identity": "Für die Stadt haben wir ein eigenes Wappen und eine eigene Flagge entworfen. Die Flagge findet ihr auch am Rathaus im Modell.",
+    "home.identity": "{city} verbindet zwei lateinische Wörter: sol (Sonne) und mare (Meer). Für die Stadt haben wir ein eigenes Wappen und eine eigene Flagge entworfen. Die Flagge findet ihr auch am Rathaus im Modell.",
     "home.crestCap": "Stadtwappen",
     "home.flagCap": "Stadtflagge",
     "home.planTitle": "Grundriss der Stadt",
@@ -215,7 +215,7 @@ const TEXT = {
     "home.kicker": "Czech-German project week, Bielefeld",
     "home.motto": "Two languages, one city.",
     "home.welcomeTitle": "Welcome",
-    "home.welcome": "Hi, and welcome to our city. Ten of us, five from Czechia and five from Germany, planned and built this model during our project week in Bielefeld. Scan the QR codes on the model or use the menu above to look around.",
+    "home.welcome": "Hi, and welcome to {city}, a green city in southern Europe in the year 2050. Ten of us, five from Czechia and five from Germany, planned and built this model during our project week in Bielefeld. Scan the QR codes on the model or use the menu above to look around.",
     "home.rulesTitle": "Our 5 Golden Rules",
     "home.rules": [
       "No littering.",
@@ -225,7 +225,7 @@ const TEXT = {
       "Everyone has to go to high school."
     ],
     "home.identityTitle": "Crest and flag",
-    "home.identity": "We designed our own crest and flag for the city. You can also find the flag on the Town Hall in the model.",
+    "home.identity": "{city} joins two Latin words: sol (sun) and mare (sea). We designed our own crest and flag for the city. You can also find the flag on the Town Hall in the model.",
     "home.crestCap": "City crest",
     "home.flagCap": "City flag",
     "home.planTitle": "City floor plan",

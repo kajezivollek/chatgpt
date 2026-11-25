@@ -26,7 +26,8 @@
   }
 
   let lang = pickLang();
-  const t = (k) => (TEXT[lang] && TEXT[lang][k] !== undefined ? TEXT[lang][k] : TEXT.en[k]);
+  const fill = (v) => (typeof v === "string" ? v.replace(/\{city\}/g, CONFIG.cityName) : v);
+  const t = (k) => fill(TEXT[lang] && TEXT[lang][k] !== undefined ? TEXT[lang][k] : TEXT.en[k]);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const withLang = (href) => {
     const [path, hash] = href.split("#");

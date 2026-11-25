@@ -1,4 +1,4 @@
-# Green City – Trilingual City Website (CZ / DE / EN)
+# Solmara – Trilingual City Website (CZ / DE / EN)
 
 CZ–DE Project Week (Bielefeld) · Pair Assignment 5: Digital, Web & City Identity.
 
