@@ -1,4 +1,4 @@
-# Mostberg – Trilingual City Website (CZ / DE / EN)
+# Green City – Trilingual City Website (CZ / DE / EN)
 
 CZ–DE Project Week (Bielefeld) · Pair Assignment 5: Digital, Web & City Identity.
 
@@ -13,6 +13,7 @@ Language buttons (CZ / DE / EN) are in the top bar.
 
 ## How to edit
 - **All texts, city name, team names:** `js/content.js`
+- **Crest & flag:** `photos/crest.png`, `photos/flag.png`
 - **Photos:** `photos/` (see `photos/README.md`)
 - **Audio guides:** `media/audio/` (see `media/audio/README.md`)
 

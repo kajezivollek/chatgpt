@@ -33,38 +33,12 @@
     return path + "?lang=" + lang + (hash ? "#" + hash : "");
   };
 
-  /* ---------- Crest & flag (inline SVG) ---------- */
-  let crestN = 0;
+  /* ---------- Crest (your own image: photos/crest.png) ---------- */
+  const LEAF = `<svg class="leaf" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 52C12 26 28 12 54 10c-2 26-16 42-42 42z"/><path d="M12 52L38 26"/><path d="M26 38h9M31 33v-7"/></svg>`;
+  window.crestFallback = function (img) { const d = document.createElement("span"); d.innerHTML = LEAF; img.replaceWith(d.firstChild); };
   window.crestSVG = function () {
-    const id = "shield" + (++crestN);
-    return `<svg viewBox="0 0 200 240" role="img" aria-label="${esc(CONFIG.cityName)}">
-      <defs><clipPath id="${id}"><path d="M10 10h180v110c0 60-45 95-90 110C55 215 10 180 10 120z"/></clipPath></defs>
-      <g clip-path="url(#${id})">
-        <rect width="200" height="240" fill="#1f4e8c"/>
-        <rect y="150" width="200" height="90" fill="#2e8b57"/>
-        <path d="M0 150q25-12 50 0t50 0 50 0 50 0v16q-25-12-50 0t-50 0-50 0-50 0z" fill="#fff" opacity=".9"/>
-        <circle cx="150" cy="52" r="20" fill="#f4c430"/>
-        <g stroke="#f4c430" stroke-width="4" stroke-linecap="round">
-          <path d="M150 20v-8M150 92v-8M118 52h-8M190 52h-8M127 29l-6-6M179 81l-6-6M173 29l6-6M121 81l6-6"/>
-        </g>
-        <path d="M52 40v66" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-        <g fill="#fff"><path d="M52 40l-4-24h8z"/><path d="M52 40l22 10-2 6z"/><path d="M52 40l-20 14 5 4z"/></g>
-        <circle cx="52" cy="40" r="5" fill="#fff"/>
-        <path d="M14 150V112H186V150H164A64 18 0 0 0 36 150Z" fill="#fff"/>
-        <path d="M14 112H186" stroke="#f4c430" stroke-width="4"/>
-        <path d="M58 112v8M82 112v13M100 112v14M118 112v13M142 112v8" stroke="#1f4e8c" stroke-width="3"/>
-      </g>
-      <path d="M10 10h180v110c0 60-45 95-90 110C55 215 10 180 10 120z" fill="none" stroke="#f4c430" stroke-width="8"/>
-    </svg>`;
-  };
-
-  window.flagSVG = function () {
-    return `<svg viewBox="0 0 300 200" role="img" aria-label="Flag">
-      <rect width="300" height="200" fill="#1f4e8c"/>
-      <rect y="133" width="300" height="67" fill="#2e8b57"/>
-      <rect y="120" width="300" height="13" fill="#fff"/>
-      <g transform="translate(118 18) scale(.42)">${window.crestSVG().replace(/<svg[^>]*>|<\/svg>/g, "")}</g>
-    </svg>`;
+    return `<img src="photos/crest.png" alt="${esc(CONFIG.cityName)}" onerror="crestFallback(this)">`;
   };
 
   /* ---------- Header / footer ---------- */
@@ -186,7 +160,6 @@
     });
     document.querySelectorAll("[data-href]").forEach((el) => (el.href = withLang(el.dataset.href)));
     document.querySelectorAll("[data-crest]").forEach((el) => (el.innerHTML = window.crestSVG()));
-    document.querySelectorAll("[data-flag]").forEach((el) => (el.innerHTML = window.flagSVG()));
     document.querySelectorAll("[data-photo]").forEach(photo);
     document.querySelectorAll("[data-audio]").forEach(audio);
     document.querySelectorAll("[data-gallery]").forEach(gallery);

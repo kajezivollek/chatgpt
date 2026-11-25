@@ -5,8 +5,8 @@
    ===================================================================== */
 
 const CONFIG = {
-  // City name (same in all languages)
-  cityName: "Mostberg",
+  // City name (same in all languages) – replace with your own name
+  cityName: "Green City",
 
   // Public web address of the site once it is online (used for the QR codes).
   // Leave empty to use the address the site is currently opened from.
@@ -61,7 +61,7 @@ const TEXT = {
       "Spolupracujeme – problémy řešíme jako jeden tým."
     ],
     "home.identityTitle": "Znak a vlajka",
-    "home.identity": "Most ve znaku spojuje dva břehy – stejně jako náš projekt spojuje Česko a Německo. Slunce a větrná turbína představují čistou energii, zelená barva naše parky.",
+    "home.identity": "Náš znak a vlajka ukazují, za čím naše město stojí: čistá energie, příroda a česko-německé přátelství.",
     "home.crestCap": "Městský znak",
     "home.flagCap": "Městská vlajka",
     "home.planTitle": "Půdorys města",
@@ -143,7 +143,7 @@ const TEXT = {
       "Gemeinsam handeln – wir lösen Probleme als ein Team."
     ],
     "home.identityTitle": "Wappen & Flagge",
-    "home.identity": "Die Brücke im Wappen verbindet zwei Ufer – so wie unser Projekt Tschechien und Deutschland verbindet. Sonne und Windrad stehen für saubere Energie, Grün für unsere Parks.",
+    "home.identity": "Unser Wappen und unsere Flagge zeigen, wofür unsere Stadt steht: saubere Energie, Natur und deutsch-tschechische Freundschaft.",
     "home.crestCap": "Stadtwappen",
     "home.flagCap": "Stadtflagge",
     "home.planTitle": "Grundriss der Stadt",
@@ -225,7 +225,7 @@ const TEXT = {
       "Work together – we solve problems as one team."
     ],
     "home.identityTitle": "Crest & Flag",
-    "home.identity": "The bridge on our crest connects two riverbanks – just as our project connects Czechia and Germany. The sun and the wind turbine stand for clean energy, the green for our parks.",
+    "home.identity": "Our crest and flag show what our city stands for: clean energy, nature and Czech–German friendship.",
     "home.crestCap": "City crest",
     "home.flagCap": "City flag",
     "home.planTitle": "City Floor Plan",
