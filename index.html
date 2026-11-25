@@ -11,12 +11,13 @@
 
 <div class="hero">
   <div class="wrap hero-grid">
-    <div class="hero-crest" data-crest></div>
-    <div>
+    <div class="hero-text">
+      <div class="hero-crest" data-crest></div>
       <p class="kicker" data-t="home.kicker"></p>
       <h1 data-city></h1>
       <p class="motto" data-t="home.motto"></p>
     </div>
+    <figure class="photo hero-photo" data-photo="photos/floor-plan.jpg" data-cap="home.planCap"></figure>
   </div>
 </div>
 
@@ -33,27 +34,21 @@
     </div>
   </section>
 
-  <section id="identity" class="grid-2">
-    <div class="card">
+  <section id="identity" class="identity-row">
+    <div>
       <h2 data-t="home.identityTitle"></h2>
       <p data-t="home.identity"></p>
-      <div class="identity">
-        <figure class="photo" data-photo="photos/crest.png" data-cap="home.crestCap"></figure>
-        <figure class="photo" data-photo="photos/flag.png" data-cap="home.flagCap"></figure>
-      </div>
     </div>
-    <div class="card">
-      <h2 data-t="home.planTitle"></h2>
-      <figure class="photo" data-photo="photos/floor-plan.jpg" data-cap="home.planCap"></figure>
-    </div>
+    <figure class="photo crest-fig" data-photo="photos/crest.png" data-cap="home.crestCap"></figure>
+    <figure class="photo flag-fig" data-photo="photos/flag.png" data-cap="home.flagCap"></figure>
   </section>
 
   <section>
     <h2 data-t="home.explore"></h2>
     <div class="tiles">
-      <a class="tile" data-href="landmarks.html"><span>01</span><b data-t="nav.landmarks"></b></a>
-      <a class="tile green" data-href="green.html"><span>02</span><b data-t="nav.green"></b></a>
-      <a class="tile gold" data-href="team.html"><span>03</span><b data-t="nav.team"></b></a>
+      <a class="tile" data-href="landmarks.html"><b data-t="nav.landmarks"></b><small data-t="lm.intro"></small></a>
+      <a class="tile" data-href="green.html"><b data-t="nav.green"></b><small data-t="gr.intro"></small></a>
+      <a class="tile" data-href="team.html"><b data-t="nav.team"></b><small data-t="tm.intro"></small></a>
     </div>
   </section>
 </main>
