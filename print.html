@@ -78,7 +78,9 @@
     <div class="tbl-wrap"><table class="planner" id="planner"></table></div>
   </section>
 
-  <div class="sheet"><div class="signs" id="signs"></div></div>
+  <div class="sheet"><div class="signs" id="signs-1"></div></div>
+
+  <div class="sheet page-break"><div class="signs" id="signs-2"></div></div>
 
   <div class="sheet page-break">
     <div class="rules-print" id="rules-card"></div>
@@ -123,7 +125,7 @@
           <td class="url"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(url)}</a></td><td></td></tr>`;
       }).join("");
 
-    document.getElementById("signs").innerHTML = CONFIG.stations.map((s, i) => {
+    const signsHTML = CONFIG.stations.map((s, i) => {
       const url = base + s.page + "#" + s.section;
       return `<div class="sign">
         <div class="front">
@@ -136,7 +138,9 @@
         <div class="fold"><span>ohnout · falzen</span></div>
         <div class="base">${crest}<span>Stanoviště / Station ${s.n}</span></div>
       </div>`;
-    }).join("");
+    });
+    document.getElementById("signs-1").innerHTML = signsHTML.slice(0, 3).join("");
+    document.getElementById("signs-2").innerHTML = signsHTML.slice(3).join("");
 
     const cs = TEXT.cs["home.rules"], de = TEXT.de["home.rules"];
     document.getElementById("rules-card").innerHTML = `
