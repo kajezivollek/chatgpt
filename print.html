@@ -8,37 +8,37 @@
 <style>
   .controls label { font-weight: 600; display: block; margin-bottom: 6px; }
   .controls .row { display: flex; gap: 8px; flex-wrap: wrap; }
-  .controls input { flex: 1; min-width: 240px; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); }
-  .btn { font: inherit; font-weight: 700; border: 1px solid var(--primary); border-radius: 8px; padding: 8px 18px; background: transparent; color: var(--primary); cursor: pointer; }
-  .btn.gold { background: var(--primary); color: var(--on-primary); }
+  .controls input { flex: 1; min-width: 240px; font: inherit; padding: 8px 10px; border: 1px solid var(--divider); border-radius: 8px; background: var(--contrast); color: var(--primary); }
+  .btn { font: inherit; font-weight: 700; border: 1px solid var(--primary); border-radius: 0; padding: 8px 18px; background: transparent; color: var(--primary); cursor: pointer; }
+  .btn.gold { background: var(--primary); color: var(--contrast); }
   .warn { background: #fff4d6; color: #5a4300; border: 1px solid #f0d58a; border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
   .planner { width: 100%; border-collapse: collapse; font-size: .92rem; }
-  .planner th, .planner td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
-  .planner th { background: var(--secondary); color: var(--primary); }
+  .planner th, .planner td { border: 1px solid var(--divider); padding: 6px 8px; text-align: left; vertical-align: top; }
+  .planner th { background: var(--primary); color: var(--contrast); }
   .planner td.url { word-break: break-all; font-size: .8rem; }
   .tbl-wrap { overflow-x: auto; }
 
   /* ---- Printable sheets (real sizes) ---- */
-  .sheet { background: #fff; color: #000; padding: 8mm; margin: 0 auto 24px; width: 210mm; max-width: 100%; border: 1px solid var(--line); }
+  .sheet { background: #fff; color: #000; padding: 8mm; margin: 0 auto 24px; width: 210mm; max-width: 100%; border: 1px solid var(--divider); }
   .signs { display: grid; grid-template-columns: repeat(3, 62mm); gap: 6mm 4mm; justify-content: center; }
   .sign { width: 62mm; height: 125mm; border: 0.3mm solid #999; display: flex; flex-direction: column; font-family: Arial, Helvetica, sans-serif; break-inside: avoid; }
   .sign .front { height: 95mm; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 3mm; }
-  .sign .top { width: calc(100% + 6mm); background: #2d6a4f; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 2mm 3mm; font-weight: 700; font-size: 3.6mm; border-bottom: 1.2mm solid #e76f51; }
+  .sign .top { width: calc(100% + 6mm); background: #36454f; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 2mm 3mm; font-weight: 700; font-size: 3.6mm; border-bottom: 1.2mm solid #708090; }
   .sign .loc { font-weight: 700; font-size: 3.4mm; line-height: 1.25; margin: 2.5mm 0 2mm; min-height: 9mm; display: flex; flex-direction: column; justify-content: center; }
   .sign .loc i { font-weight: 400; font-style: normal; color: #333; }
   .sign .qr { width: 42mm; height: 42mm; background: #fff; }
   .sign .qr svg { width: 100%; height: 100%; display: block; shape-rendering: crispEdges; }
-  .sign .scan { font-weight: 700; font-size: 3.3mm; margin-top: 2mm; color: #2d6a4f; }
+  .sign .scan { font-weight: 700; font-size: 3.3mm; margin-top: 2mm; color: #36454f; }
   .sign .topic { font-size: 2.6mm; color: #333; margin-top: 1.5mm; line-height: 1.25; }
   .sign .fold { border-top: 0.4mm dashed #666; position: relative; font-size: 2.2mm; color: #666; text-align: center; }
   .sign .fold span { position: relative; top: -2mm; background: #fff; padding: 0 1.5mm; }
   .sign .base { flex: 1; display: flex; align-items: center; justify-content: center; gap: 2mm; font-size: 3mm; color: #333; transform: rotate(180deg); }
-  .sign .base svg, .sign .base img { width: 9mm; height: auto; color: #2d6a4f; filter: none; }
+  .sign .base svg, .sign .base img { width: 9mm; height: auto; color: #36454f; filter: none; }
 
-  .rules-print { width: 148mm; margin: 0 auto; border: 0.5mm solid #2d6a4f; border-radius: 4mm; padding: 7mm; font-family: Arial, Helvetica, sans-serif; color: #000; }
-  .rules-print header { display: flex; align-items: center; gap: 5mm; border-bottom: 1.2mm solid #e76f51; padding-bottom: 3mm; margin-bottom: 3mm; }
-  .rules-print header svg, .rules-print header img { width: 18mm; height: auto; color: #2d6a4f; filter: none; }
-  .rules-print h2 { margin: 0; font-size: 7mm; color: #2d6a4f; }
+  .rules-print { width: 148mm; margin: 0 auto; border: 0.5mm solid #36454f; border-radius: 4mm; padding: 7mm; font-family: Arial, Helvetica, sans-serif; color: #000; }
+  .rules-print header { display: flex; align-items: center; gap: 5mm; border-bottom: 1.2mm solid #708090; padding-bottom: 3mm; margin-bottom: 3mm; }
+  .rules-print header svg, .rules-print header img { width: 18mm; height: auto; color: #36454f; filter: none; }
+  .rules-print h2 { margin: 0; font-size: 7mm; color: #36454f; }
   .rules-print .m { font-style: italic; font-size: 3.2mm; color: #333; }
   .rules-print ol { margin: 0; padding-left: 6mm; }
   .rules-print li { margin: 0 0 2.2mm; font-size: 3.4mm; line-height: 1.3; }
