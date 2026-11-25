@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR signs · Mostberg</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .controls label { font-weight: 600; display: block; margin-bottom: 6px; }
+  .controls .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .controls input { flex: 1; min-width: 240px; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); }
+  .btn { font: inherit; font-weight: 700; border: 0; border-radius: 8px; padding: 8px 16px; background: var(--blue); color: #fff; cursor: pointer; }
+  .btn.gold { background: var(--gold); color: var(--blue-d); }
+  .warn { background: #fff4d6; color: #5a4300; border: 1px solid #f0d58a; border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
+  .planner { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  .planner th, .planner td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+  .planner th { background: var(--blue); color: #fff; }
+  .planner td.url { word-break: break-all; font-size: .8rem; }
+  .tbl-wrap { overflow-x: auto; }
+
+  /* ---- Printable sheets (real sizes) ---- */
+  .sheet { background: #fff; color: #000; padding: 8mm; margin: 0 auto 24px; width: 210mm; max-width: 100%; box-shadow: var(--shadow); }
+  .signs { display: grid; grid-template-columns: repeat(3, 62mm); gap: 6mm 4mm; justify-content: center; }
+  .sign { width: 62mm; height: 125mm; border: 0.3mm solid #999; display: flex; flex-direction: column; font-family: Arial, Helvetica, sans-serif; break-inside: avoid; }
+  .sign .front { height: 95mm; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 3mm; }
+  .sign .top { width: calc(100% + 6mm); background: #1f4e8c; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 2mm 3mm; font-weight: 700; font-size: 3.6mm; border-bottom: 1.2mm solid #f4c430; }
+  .sign .loc { font-weight: 700; font-size: 3.4mm; line-height: 1.25; margin: 2.5mm 0 2mm; min-height: 9mm; display: flex; flex-direction: column; justify-content: center; }
+  .sign .loc i { font-weight: 400; font-style: normal; color: #333; }
+  .sign .qr { width: 42mm; height: 42mm; background: #fff; }
+  .sign .qr svg { width: 100%; height: 100%; display: block; shape-rendering: crispEdges; }
+  .sign .scan { font-weight: 700; font-size: 3.3mm; margin-top: 2mm; color: #1f4e8c; }
+  .sign .topic { font-size: 2.6mm; color: #333; margin-top: 1.5mm; line-height: 1.25; }
+  .sign .fold { border-top: 0.4mm dashed #666; position: relative; font-size: 2.2mm; color: #666; text-align: center; }
+  .sign .fold span { position: relative; top: -2mm; background: #fff; padding: 0 1.5mm; }
+  .sign .base { flex: 1; display: flex; align-items: center; justify-content: center; gap: 2mm; font-size: 3mm; color: #333; transform: rotate(180deg); }
+  .sign .base svg { width: 9mm; height: auto; }
+
+  .rules-print { width: 148mm; margin: 0 auto; border: 0.5mm solid #1f4e8c; border-radius: 4mm; padding: 7mm; font-family: Arial, Helvetica, sans-serif; color: #000; }
+  .rules-print header { display: flex; align-items: center; gap: 5mm; border-bottom: 1.2mm solid #f4c430; padding-bottom: 3mm; margin-bottom: 3mm; }
+  .rules-print header svg { width: 18mm; height: auto; }
+  .rules-print h2 { margin: 0; font-size: 7mm; color: #1f4e8c; }
+  .rules-print .m { font-style: italic; font-size: 3.2mm; color: #333; }
+  .rules-print ol { margin: 0; padding-left: 6mm; }
+  .rules-print li { margin: 0 0 2.2mm; font-size: 3.4mm; line-height: 1.3; }
+  .rules-print li span { display: block; color: #444; font-size: 3.1mm; }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+    body { background: #fff; }
+    #site-header, #site-footer, .no-print { display: none !important; }
+    main { padding: 0; }
+    .sheet { box-shadow: none; margin: 0; width: 210mm; }
+    .page-break { break-before: page; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<header id="site-header" data-page="print"></header>
+
+<main class="wrap">
+  <section class="card controls no-print">
+    <h2>🖨️ QR signs / QR cedulky / QR-Schilder</h2>
+    <label for="base">Website address used in the QR codes · Adresa webu v QR kódech · Website-Adresse in den QR-Codes</label>
+    <div class="row">
+      <input id="base" type="url" placeholder="https://…/">
+      <button class="btn" id="apply">OK</button>
+      <button class="btn gold" onclick="window.print()">Print / Tisk / Drucken</button>
+    </div>
+    <div class="warn" id="warn" hidden>⚠️ This page is opened from a local file. Put the website online first and enter its public address above, otherwise phones cannot open the QR links.</div>
+    <p class="muted">Print on A4 at 100 % scale (no "fit to page"). QR codes are 4.2 × 4.2 cm with a white quiet border. Fold along the dashed line to make an L-shaped stand.</p>
+  </section>
+
+  <section class="card no-print">
+    <h2>QR Station Planner</h2>
+    <div class="tbl-wrap"><table class="planner" id="planner"></table></div>
+  </section>
+
+  <div class="sheet"><div class="signs" id="signs"></div></div>
+
+  <div class="sheet page-break">
+    <div class="rules-print" id="rules-card"></div>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/qrcode.js"></script>
+<script src="js/content.js"></script>
+<script src="js/site.js"></script>
+<script>
+(function () {
+  const esc = SITE.esc;
+  const input = document.getElementById("base");
+
+  function defaultBase() {
+    if (CONFIG.siteUrl) return CONFIG.siteUrl;
+    try { const s = localStorage.getItem("city-base"); if (s) return s; } catch (e) {}
+    return location.href.split(/[?#]/)[0].replace(/[^/]*$/, "");
+  }
+  function norm(b) { b = b.trim(); return b && !b.endsWith("/") ? b + "/" : b; }
+
+  function qrSvg(text) {
+    const q = qrcode(0, "M");
+    q.addData(text);
+    q.make();
+    return q.createSvgTag({ cellSize: 1, margin: 4, scalable: true });
+  }
+
+  function build() {
+    const base = norm(input.value);
+    document.getElementById("warn").hidden = !base.startsWith("file:");
+    const L = STATION_LABELS;
+    const crest = crestSVG();
+
+    document.getElementById("planner").innerHTML =
+      "<tr><th>QR #</th><th>Model location</th><th>Website section / 30-sec audio topic (CZ / DE)</th><th>Link</th><th>Tested ✓</th></tr>" +
+      CONFIG.stations.map((s, i) => {
+        const url = base + s.page + "#" + s.section;
+        return `<tr><td><b>QR ${s.n}</b></td><td>${esc(L[i].loc.cs)}<br><i>${esc(L[i].loc.de)}</i></td>
+          <td>${esc(L[i].topic.cs)}<br><i>${esc(L[i].topic.de)}</i></td>
+          <td class="url"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(url)}</a></td><td></td></tr>`;
+      }).join("");
+
+    document.getElementById("signs").innerHTML = CONFIG.stations.map((s, i) => {
+      const url = base + s.page + "#" + s.section;
+      return `<div class="sign">
+        <div class="front">
+          <div class="top"><span>QR ${s.n}</span><span>${esc(CONFIG.cityName)}</span></div>
+          <div class="loc">${esc(L[i].loc.cs)}<i>${esc(L[i].loc.de)}</i></div>
+          <div class="qr">${qrSvg(url)}</div>
+          <div class="scan">🎧 Naskenuj mě! · Scan mich!</div>
+          <div class="topic">${esc(L[i].topic.cs)}<br>${esc(L[i].topic.de)}</div>
+        </div>
+        <div class="fold"><span>ohnout · falzen</span></div>
+        <div class="base">${crest}<span>Stanoviště / Station ${s.n}</span></div>
+      </div>`;
+    }).join("");
+
+    const cs = TEXT.cs["home.rules"], de = TEXT.de["home.rules"];
+    document.getElementById("rules-card").innerHTML = `
+      <header>${crest}<div><h2>${esc(CONFIG.cityName)}</h2>
+        <div class="m">${esc(TEXT.cs["home.motto"])}<br>${esc(TEXT.de["home.motto"])}</div></div></header>
+      <h3 style="margin:0 0 3mm;font-size:4.5mm">${esc(TEXT.cs["home.rulesTitle"])} · ${esc(TEXT.de["home.rulesTitle"])}</h3>
+      <ol>${cs.map((r, i) => `<li>${esc(r)}<span>${esc(de[i])}</span></li>`).join("")}</ol>`;
+  }
+
+  input.value = defaultBase();
+  document.getElementById("apply").addEventListener("click", () => {
+    try { localStorage.setItem("city-base", norm(input.value)); } catch (e) {}
+    build();
+  });
+  input.addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("apply").click(); });
+  build();
+})();
+</script>
+</body>
+</html>

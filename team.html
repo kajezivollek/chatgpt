@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostberg</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="nav.team">
+<header id="site-header" data-page="team"></header>
+
+<div class="page-head"><div class="wrap">
+  <h1 data-t="tm.title"></h1>
+  <p data-t="tm.intro"></p>
+</div></div>
+
+<main class="wrap">
+  <section id="diary">
+    <h2 data-t="tm.diaryTitle"></h2>
+    <div class="timeline">
+      <div class="card day"><h3 data-t="tm.day1Title"></h3><p data-t="tm.day1"></p></div>
+      <div class="card day two"><h3 data-t="tm.day2Title"></h3><p data-t="tm.day2"></p></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2 data-t="tm.teamTitle"></h2>
+    <div class="pairs" data-team></div>
+  </section>
+
+  <section id="gallery" class="station card">
+    <h2>📸 <span data-t="tm.galleryTitle"></span></h2>
+    <div class="gallery" data-gallery></div>
+    <div class="audio" data-audio="6"></div>
+    <p class="muted" data-t="tm.credits"></p>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/content.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

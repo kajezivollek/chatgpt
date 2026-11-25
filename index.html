@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostberg</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-title-key="nav.home">
+<header id="site-header" data-page="home"></header>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-crest" data-crest></div>
+    <div>
+      <p class="kicker" data-t="home.kicker"></p>
+      <h1 data-city></h1>
+      <p class="motto" data-t="home.motto"></p>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="welcome" class="station grid-2">
+    <div class="card">
+      <h2 data-t="home.welcomeTitle"></h2>
+      <p data-t="home.welcome"></p>
+      <div class="audio" data-audio="1"></div>
+    </div>
+    <div class="card rules-card" id="rules">
+      <h2 data-t="home.rulesTitle"></h2>
+      <ol class="rules" data-list="home.rules"></ol>
+    </div>
+  </section>
+
+  <section id="identity" class="grid-2">
+    <div class="card">
+      <h2 data-t="home.identityTitle"></h2>
+      <p data-t="home.identity"></p>
+      <div class="identity">
+        <figure><div class="crest-box" data-crest></div><figcaption data-t="home.crestCap"></figcaption></figure>
+        <figure><div class="flag-box" data-flag></div><figcaption data-t="home.flagCap"></figcaption></figure>
+      </div>
+    </div>
+    <div class="card">
+      <h2 data-t="home.planTitle"></h2>
+      <figure class="photo" data-photo="photos/floor-plan.jpg" data-cap="home.planCap"></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-t="home.explore"></h2>
+    <div class="tiles">
+      <a class="tile" data-href="landmarks.html"><span>🏛️</span><b data-t="nav.landmarks"></b></a>
+      <a class="tile green" data-href="green.html"><span>🌳</span><b data-t="nav.green"></b></a>
+      <a class="tile gold" data-href="team.html"><span>📸</span><b data-t="nav.team"></b></a>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/content.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
