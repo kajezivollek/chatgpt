@@ -162,8 +162,8 @@ figure.photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .tag { font-size: .68rem; font-weight: 700; color: var(--secondary); min-width: 20px; }
 
 /* Gallery */
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 6px; }
-.gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .gallery a:hover img { opacity: .85; }
 .gallery .empty { grid-column: 1 / -1; margin: 0; }
 
