@@ -153,9 +153,13 @@ figure.photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 @media (max-width: 760px) { .timeline { grid-template-columns: 1fr; gap: 24px; } }
 
 /* Team */
-.members { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0 24px; }
-.members li { padding: 12px 0; border-top: 2px solid var(--primary); font-weight: 700; }
+.members { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.pair { border-top: 2px solid var(--primary); padding-top: 10px; font-size: .95rem; }
+.pair-num { font-weight: 700; }
+.pair-role { font-size: .85rem; color: var(--muted); margin: 0 0 10px; line-height: 1.45; min-height: 2.9em; }
+.pair .tag { display: inline-block; min-width: 26px; font-size: .68rem; font-weight: 700; color: var(--secondary); }
 @media (max-width: 860px) { .members { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .members { grid-template-columns: 1fr; } }
 
 /* Gallery */
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }

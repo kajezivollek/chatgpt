@@ -12,10 +12,13 @@ const CONFIG = {
   // Leave empty to use the address the site is currently opened from.
   siteUrl: "",
 
-  // Team 3: our 10 members (first name, surname).
+  // Team 3: five pairs (Czech partner + German partner), from our Team Master Plan.
   team: [
-    "Jonathan Apel", "Anneke Wittler", "Nicolas Tlustoš", "Viola Novotná", "Hande Akmaner",
-    "Alexandra Lavin", "Tobias Knoth", "Kaj Kuchař", "Emma Wernerová", "Patrik Buš"
+    { pair: 1, cz: "Viola Novotná",   de: "Anneke Wittler" },
+    { pair: 2, cz: "Emma Wernerová",  de: "Alexandra Lavin" },
+    { pair: 3, cz: "Nicolas Tlustoš", de: "Patrik Buš" },
+    { pair: 4, cz: "Jonathan Apel",   de: "Hande Akmaner" },
+    { pair: 5, cz: "Kaj Kuchař",      de: "Tobias Knoth" }
   ],
 
   // Gallery photos in /photos (missing files are hidden automatically).
@@ -51,11 +54,11 @@ const TEXT = {
     "home.welcome": "Ahoj a vítejte v našem městě. Deset z nás, pět z Česka a pět z Německa, naplánovalo a postavilo tento model během projektového týdne v Bielefeldu. Naskenujte QR kódy na modelu nebo se rozhlédněte přes menu nahoře.",
     "home.rulesTitle": "Našich 5 Zlatých pravidel",
     "home.rules": [
-      "Ke každému se chovej s respektem, ať mluví jakýmkoli jazykem.",
-      "Choď pěšky, jezdi na kole nebo tramvají. Auto nech doma.",
-      "Šetři energií. Naše elektřina pochází ze slunce a větru.",
-      "Starej se o parky a udržuj ulice čisté.",
-      "Problémy řešíme společně."
+      "Neodhazuj odpadky.",
+      "Neubližuj přírodě.",
+      "Běžní občané nesmějí mít zbraně.",
+      "Žádná doprava na fosilní paliva.",
+      "Střední škola je pro všechny povinná."
     ],
     "home.identityTitle": "Znak a vlajka",
     "home.identity": "Pro město jsme navrhli vlastní znak a vlajku. Vlajku najdete i na radnici v modelu.",
@@ -99,11 +102,11 @@ const TEXT = {
     "tm.teamTitle": "Kdo jsme: tým 3",
     "tm.pair": "Dvojice",
     "tm.roles": [
-      "Dominanta, škola a nemocnice",
-      "Radnice a Hlavní náměstí",
-      "Dopravní uzel, most a doprava",
-      "Park, větrná farma a ekologická rovnováha",
-      "Web, QR kódy a identita města"
+      "Hlavní urbanisté a manažeři",
+      "Architekti hlavních budov",
+      "Inženýři dopravy a mobility",
+      "Ekologové a městští ekonomové",
+      "Digitální svět, web a identita města"
     ],
     "tm.galleryTitle": "Fotky z 1. a 2. dne",
     "tm.galleryEmpty": "Fotky brzy přidáme.",
@@ -133,11 +136,11 @@ const TEXT = {
     "home.welcome": "Hallo und willkommen in unserer Stadt. Wir sind zehn Schülerinnen und Schüler, fünf aus Tschechien und fünf aus Deutschland, und haben dieses Modell in der Projektwoche in Bielefeld geplant und gebaut. Scannt die QR-Codes am Modell oder schaut euch über das Menü oben um.",
     "home.rulesTitle": "Unsere 5 Goldenen Regeln",
     "home.rules": [
-      "Behandle alle mit Respekt, egal welche Sprache sie sprechen.",
-      "Geh zu Fuß, fahr Rad oder nimm die Straßenbahn. Das Auto bleibt zu Hause.",
-      "Spar Energie. Unser Strom kommt von Sonne und Wind.",
-      "Pass auf die Parks auf und halte die Straßen sauber.",
-      "Probleme lösen wir gemeinsam."
+      "Wirf keinen Müll weg.",
+      "Schade der Natur nicht.",
+      "Normale Bürger dürfen keine Waffen tragen.",
+      "Keine Fahrzeuge mit fossilen Brennstoffen.",
+      "Alle müssen die Oberstufe besuchen."
     ],
     "home.identityTitle": "Wappen und Flagge",
     "home.identity": "Für die Stadt haben wir ein eigenes Wappen und eine eigene Flagge entworfen. Die Flagge findet ihr auch am Rathaus im Modell.",
@@ -181,11 +184,11 @@ const TEXT = {
     "tm.teamTitle": "Wer wir sind: Team 3",
     "tm.pair": "Paar",
     "tm.roles": [
-      "Wahrzeichen, Schule und Krankenhaus",
-      "Rathaus und Hauptplatz",
-      "Verkehrsknotenpunkt, Brücke und Verkehr",
-      "Park, Windpark und Öko-Bilanz",
-      "Website, QR-Codes und Stadtidentität"
+      "Chef-Stadtplaner und Manager",
+      "Architekten der wichtigsten Gebäude",
+      "Verkehrs- und Mobilitätsingenieure",
+      "Ökologen und Stadtökonomen",
+      "Digital, Web und Stadtidentität"
     ],
     "tm.galleryTitle": "Fotos von Tag 1 und Tag 2",
     "tm.galleryEmpty": "Die Fotos kommen bald.",
@@ -215,11 +218,11 @@ const TEXT = {
     "home.welcome": "Hi, and welcome to our city. Ten of us, five from Czechia and five from Germany, planned and built this model during our project week in Bielefeld. Scan the QR codes on the model or use the menu above to look around.",
     "home.rulesTitle": "Our 5 Golden Rules",
     "home.rules": [
-      "Treat everyone with respect, whatever language they speak.",
-      "Walk, cycle or take the tram. Leave the car at home.",
-      "Save energy. Our power comes from the sun and the wind.",
-      "Look after the parks and keep the streets clean.",
-      "Solve problems together."
+      "No littering.",
+      "Don't harm nature.",
+      "No weapons for ordinary citizens.",
+      "No vehicles that run on fossil fuels.",
+      "Everyone has to go to high school."
     ],
     "home.identityTitle": "Crest and flag",
     "home.identity": "We designed our own crest and flag for the city. You can also find the flag on the Town Hall in the model.",
@@ -263,11 +266,11 @@ const TEXT = {
     "tm.teamTitle": "Who we are: Team 3",
     "tm.pair": "Pair",
     "tm.roles": [
-      "Landmark, school and hospital",
-      "Town Hall and Main Plaza",
-      "Transit Hub, bridge and transport",
-      "Park, wind farm and Eco-Balance",
-      "Website, QR codes and city identity"
+      "Chief urbanists and managers",
+      "Architects of the key buildings",
+      "Transport and mobility engineers",
+      "Ecologists and city economists",
+      "Digital, web and city identity"
     ],
     "tm.galleryTitle": "Photos from day 1 and day 2",
     "tm.galleryEmpty": "We'll add the photos soon.",
