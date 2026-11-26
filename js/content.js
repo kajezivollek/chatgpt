@@ -114,7 +114,6 @@ const TEXT = {
 
     "audio.title": "Audioprůvodce",
     "audio.en": "English",
-    "audio.note": "Hlas vytvořený umělou inteligencí (parodie).",
     "audio.cs": "Česky",
     "audio.de": "Deutsch",
     "audio.missing": "Nahrávku brzy přidáme.",
@@ -198,7 +197,6 @@ const TEXT = {
 
     "audio.title": "Audioguide",
     "audio.en": "English",
-    "audio.note": "KI-generierte Stimme (Parodie).",
     "audio.cs": "Česky",
     "audio.de": "Deutsch",
     "audio.missing": "Die Aufnahme kommt bald.",
@@ -282,7 +280,6 @@ const TEXT = {
 
     "audio.title": "Audio guide",
     "audio.en": "English",
-    "audio.note": "AI-generated voice (parody).",
     "audio.cs": "Česky",
     "audio.de": "Deutsch",
     "audio.missing": "We'll upload the recording soon.",

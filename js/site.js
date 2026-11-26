@@ -105,15 +105,13 @@
         <div class="audio-row">
           <span class="audio-lang">${esc(t("audio." + l))}</span>
           <audio controls preload="metadata" src="media/audio/qr${esc(n)}-${l}.mp3"></audio>
-        </div>`).join("")}
-      <p class="audio-note muted">${esc(t("audio.note"))}</p>`;
+        </div>`).join("")}`;
     const rows = [...el.querySelectorAll(".audio-row")];
     let left = rows.length;
     rows.forEach((row) =>
       row.querySelector("audio").addEventListener("error", () => {
         row.remove();
         if (--left === 0) {
-          el.querySelector(".audio-note").remove();
           const s = document.createElement("p");
           s.className = "muted";
           s.textContent = t("audio.missing");

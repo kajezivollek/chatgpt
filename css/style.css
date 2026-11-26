@@ -137,7 +137,6 @@ figure.photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .audio-row { display: flex; align-items: center; gap: 10px; margin: 2px 0; flex-wrap: wrap; }
 .audio-lang { min-width: 64px; }
 .audio audio { flex: 1; min-width: 200px; height: 34px; }
-.audio-note { margin: 6px 0 0; font-size: .78rem; }
 
 /* Look around: three links with a line of text */
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
