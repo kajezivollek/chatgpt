@@ -6,7 +6,7 @@
 
 const CONFIG = {
   // City name (same in all languages). Replace it with your own name
-  cityName: "Green City",
+  cityName: "New Horizon",
 
   // Public web address of the site once it is online (used for the QR codes).
   // Leave empty to use the address the site is currently opened from.
