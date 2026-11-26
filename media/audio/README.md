@@ -2,6 +2,6 @@
 
 Name the recordings like this (MP3):
 
-`qr1-cs.mp3`, `qr1-de.mp3`, `qr2-cs.mp3`, `qr2-de.mp3` … `qr6-cs.mp3`, `qr6-de.mp3`
+`qr1-en.mp3` … `qr6-en.mp3` (English), plus optional `qr1-cs.mp3` … (Czech) and `qr1-de.mp3` … (German)
 
-`cs` = Czech, `de` = German. Missing files show "Recording coming soon".
+Only languages with a file get a player.

@@ -113,6 +113,8 @@ const TEXT = {
     "tm.credits": "Děkujeme našim učitelům a škole v Bielefeldu, která nás přijala.",
 
     "audio.title": "Audioprůvodce",
+    "audio.en": "English",
+    "audio.note": "Hlas vytvořený umělou inteligencí (parodie).",
     "audio.cs": "Česky",
     "audio.de": "Deutsch",
     "audio.missing": "Nahrávku brzy přidáme.",
@@ -195,6 +197,8 @@ const TEXT = {
     "tm.credits": "Danke an unsere Lehrkräfte und an die Schule in Bielefeld, die uns aufgenommen hat.",
 
     "audio.title": "Audioguide",
+    "audio.en": "English",
+    "audio.note": "KI-generierte Stimme (Parodie).",
     "audio.cs": "Česky",
     "audio.de": "Deutsch",
     "audio.missing": "Die Aufnahme kommt bald.",
@@ -277,6 +281,8 @@ const TEXT = {
     "tm.credits": "Thank you to our teachers, and to the school in Bielefeld for having us.",
 
     "audio.title": "Audio guide",
+    "audio.en": "English",
+    "audio.note": "AI-generated voice (parody).",
     "audio.cs": "Česky",
     "audio.de": "Deutsch",
     "audio.missing": "We'll upload the recording soon.",

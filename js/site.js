@@ -96,21 +96,29 @@
     });
   }
 
+  // Players for each language that has a recording; rows without a file are removed.
   function audio(el) {
     const n = el.dataset.audio;
     el.innerHTML = `
       <div class="audio-head"><span class="qr-badge">QR ${esc(n)}</span> ${esc(t("audio.title"))}</div>
-      ${["cs", "de"].map((l) => `
+      ${["en", "cs", "de"].map((l) => `
         <div class="audio-row">
           <span class="audio-lang">${esc(t("audio." + l))}</span>
           <audio controls preload="metadata" src="media/audio/qr${esc(n)}-${l}.mp3"></audio>
-        </div>`).join("")}`;
-    el.querySelectorAll("audio").forEach((a) =>
-      a.addEventListener("error", () => {
-        const s = document.createElement("span");
-        s.className = "muted";
-        s.textContent = t("audio.missing");
-        a.replaceWith(s);
+        </div>`).join("")}
+      <p class="audio-note muted">${esc(t("audio.note"))}</p>`;
+    const rows = [...el.querySelectorAll(".audio-row")];
+    let left = rows.length;
+    rows.forEach((row) =>
+      row.querySelector("audio").addEventListener("error", () => {
+        row.remove();
+        if (--left === 0) {
+          el.querySelector(".audio-note").remove();
+          const s = document.createElement("p");
+          s.className = "muted";
+          s.textContent = t("audio.missing");
+          el.appendChild(s);
+        }
       })
     );
   }
