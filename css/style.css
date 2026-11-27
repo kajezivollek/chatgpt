@@ -113,7 +113,7 @@ section.grid-2 > .rules-card { align-self: stretch; background: var(--primary); 
 .identity-row figure.photo img { object-fit: contain; background: var(--contrast); }
 .identity-row .crest-fig img, .identity-row .crest-fig .ph { aspect-ratio: 2/3; }
 .identity-row .flag-fig img, .identity-row .flag-fig .ph { aspect-ratio: 3/2; }
-#transit figure.photo img { aspect-ratio: 3/4; object-fit: cover; }
+#transit figure.photo img { aspect-ratio: 1; object-fit: cover; }
 @media (max-width: 760px) {
   .identity-row { grid-template-columns: 1fr 1.5fr; gap: 16px; align-items: end; }
   .identity-row > div { grid-column: 1 / -1; }
