@@ -108,10 +108,12 @@ section.grid-2 > .rules-card { align-self: stretch; background: var(--primary); 
 .rules li::before { content: counter(r) "."; position: absolute; left: 0; top: 8px; font-weight: 700; color: var(--divider); }
 
 /* Identity: text, crest, flag in one row */
-.identity-row { display: grid; grid-template-columns: 1.3fr .7fr 1.05fr; gap: 32px; align-items: end; }
+.identity-row { display: grid; grid-template-columns: 1.2fr .6fr 1.35fr; gap: 32px; align-items: end; }
 .identity-row p { margin: 0; }
-.crest-fig img, .crest-fig .ph { aspect-ratio: 1; object-fit: contain; }
-.flag-fig img, .flag-fig .ph { aspect-ratio: 3/2; object-fit: contain; }
+.identity-row figure.photo img { object-fit: contain; background: var(--contrast); }
+.identity-row .crest-fig img, .identity-row .crest-fig .ph { aspect-ratio: 2/3; }
+.identity-row .flag-fig img, .identity-row .flag-fig .ph { aspect-ratio: 3/2; }
+#transit figure.photo img { aspect-ratio: auto; max-height: 640px; object-fit: contain; }
 @media (max-width: 760px) {
   .identity-row { grid-template-columns: 1fr 1.5fr; gap: 16px; align-items: end; }
   .identity-row > div { grid-column: 1 / -1; }

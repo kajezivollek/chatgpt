@@ -5,7 +5,7 @@ Put the photos here with exactly these names (JPG). Missing photos show a placeh
 | File | Where it appears |
 |---|---|
 | `crest.png` | City crest (transparent PNG works best; also used in header, footer, QR signs) |
-| `flag.png` | City flag |
+| `flag.jpg` | City flag |
 | `floor-plan.jpg` | Home – city floor plan |
 | `town-hall.jpg` | Landmarks – Town Hall (Pair 2 model) |
 | `landmark.jpg` | Landmarks – Signature Landmark (Pair 1 model) |
